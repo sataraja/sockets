@@ -24,7 +24,7 @@ public class Client {
 	public void Comunica() {
 		try {
 			ConsoleInputManager tastiera= new ConsoleInputManager();
-			String messaggio = tastiera.readLine("Tu: "); //con metodo readLine legge ciò che digitiamo su tastiera
+			String messaggio = tastiera.readLine("Tu: "); //con metodo readLine legge ciÃ² che digitiamo su tastiera
 			out.writeBytes(messaggio+"\n");
 			System.out.println("Aspetto messaggio da server...");
 		    String ricevuta = in.readLine();
@@ -45,7 +45,7 @@ public class Client {
 		try {
 			System.out.println("Provo a connettermi al server...");
 			
-			 mioSocket = new Socket("185.172.206.4", porta); //connessione al socket --> il socket lo registriamo nella variabile server, necessario per la comunicazione
+			 mioSocket = new Socket("IP_PUBBLICO", porta); //connessione al socket --> il socket lo registriamo nella variabile server, necessario per la comunicazione
 			System.out.println("Connesso...");
 
 			in = new DataInputStream(mioSocket.getInputStream());
