@@ -45,7 +45,7 @@ public class Client {
 		try {
 			System.out.println("Provo a connettermi al server...");
 			
-			 mioSocket = new Socket("IP_PUBBLICO", porta); //connessione al socket --> il socket lo registriamo nella variabile server, necessario per la comunicazione
+			 mioSocket = new Socket(InetAddress.getByName(null), porta); //connessione al socket --> il socket lo registriamo nella variabile server, necessario per la comunicazione
 			System.out.println("Connesso...");
 
 			in = new DataInputStream(mioSocket.getInputStream());
